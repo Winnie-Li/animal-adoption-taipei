@@ -17,7 +17,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">臺北市公車到站即時資訊</a>
+          <a class="navbar-brand" href="#">臺北市水質監測資訊</a>
         </div>
       </div>
     </nav>
@@ -28,7 +28,7 @@
       <div class="container">
         <br>
         <br>
-        <h1>臺北市公車到站即時資訊</h1>
+        <h1>臺北市水質監測資訊</h1>
       </div>
     </div>
 
@@ -62,12 +62,9 @@
           var animalList = data.result.results;
           var HTMLanimalList = animalList.map(function(animal) {
 
-            var HTMLString = "<div class='col-md-4 drop-"+(Math.round(Math.random()*10000%3)+1)+"'><h2>"+animal.Name+"</h2><img class='img-thumbnail' src='"+animal.ImageName+"'><p><ul class='list-group'>";
+            var HTMLString = "<div class='col-md-4 drop-"+(Math.round(Math.random()*10000%3)+1)+"'><h2>"+code.Name+"</h2>;
             var items = "";
-            for (var key in animal) {
-              if(key!="_id" && key!="ImageName") {
-                items=items+"<li class='list-group-item'>"+key+":"+animal[key]+"</li>";
-              }
+            
             }
             var HTMLString = HTMLString+items+"</ul></p><div>";
             return HTMLString;
